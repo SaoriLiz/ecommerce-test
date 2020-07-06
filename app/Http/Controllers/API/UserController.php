@@ -55,6 +55,7 @@ class UserController extends Controller
     {
         $validated = $request->validated();
 
+
         $role_id = Role::where('name', 'user')->first()->id;
 
         $user = new User;

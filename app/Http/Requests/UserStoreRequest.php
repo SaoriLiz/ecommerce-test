@@ -25,9 +25,9 @@ class UserStoreRequest extends FormRequest
     {
         return [
             'name'                  => 'required',
-            'email'                 => 'required|email|unique:users,email',
+            'email'                 => 'required|email|unique:users,email|regex:/(.+)@(.+)\.(.+)/i|bail',
             'username'              => 'required|unique:users,username',
-            'password'              => 'required',
+            'password'              => 'required|min:8|regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/|bail',
             'password_confirmation' => 'required|same:password',
         ];
     }
