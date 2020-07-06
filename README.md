@@ -65,8 +65,8 @@ php artisan serve
 
 ```bash
 user: admin
-password:secret
+password:Secret123
 
 user:user
-password:secret
+password:Secret123
 ```
